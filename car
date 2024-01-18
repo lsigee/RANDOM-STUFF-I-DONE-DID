@@ -1,0 +1,31 @@
+def car():
+    print("Please pick a car type out of the following three options:")
+    print("1: Economy")
+    print("2: Saloon")
+    print("3: Sports")
+    cars=input("Please make your selection: ")
+    car=cars.lower()
+    if car=="1" or car=="economy":
+        corc=input("Please type 'Confirm' or 'Cancel': ")
+        corc=corc.lower()
+        if corc=="confirm":
+            print("Economy, Have a nice day")
+        elif corc=="cancel":
+            print("")     
+    elif car=="2" or car=="saloon":
+        corc=input("Please type 'Confirm' or 'Cancel': ")
+        corc=corc.lower()
+        if corc=="confirm":
+            print("Saloon, Have a nice day")
+        elif corc=="cancel":
+            print("")
+    elif car=="3" or car=="Sports":
+        corc=input("Please type 'Confirm' or 'Cancel': ")
+        corc=corc.lower()
+        if corc=="confirm":
+            print("Sports, Have a nice day")
+        elif corc=="cancel":
+            print("")
+    else:
+        print("Invalid input, try again")
+car()
