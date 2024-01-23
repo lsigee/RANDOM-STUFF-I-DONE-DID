@@ -1,0 +1,18 @@
+import random
+time=int(input("What times tables do you want to be tested on? "))
+num=0
+c=0
+numb=0
+for i in range(0,5):
+    num=random.randint(1,12)
+    while num==numb:
+        num=random.randint(1,12)
+    print("What is",time,"x",num,"?")
+    ans=int(input())
+    if ans==(time*num):
+        print("Correct")
+        c=c+1
+    else:
+        print("Incorrect, the correct answer is",time*num)
+    numb=num
+print("You got",c,"correct!")
