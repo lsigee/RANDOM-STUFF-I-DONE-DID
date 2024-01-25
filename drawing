@@ -1,0 +1,42 @@
+import pygame
+pygame.init()
+window = pygame.display.set_mode((500, 500))
+pygame.display.set_caption("bababooey")
+window.fill((255,255,255))
+width = 10
+run = True
+while run:
+  pygame.time.delay(0)
+
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      run = False
+  
+  if any(pygame.mouse.get_pressed()):
+    x, y = pygame.mouse.get_pos()
+    pygame.draw.circle(window, (0, 0, 0), (x, y), width)
+    pygame.display.update()
+ 
+  keys=pygame.key.get_pressed()
+  if keys[pygame.K_w]:
+    pygame.draw.circle(window, (255, 255,255),(x,y), width)
+  if keys[pygame.K_r]:
+    pygame.draw.circle(window, (255, 0,0),(x,y), width)
+  if keys[pygame.K_b]:
+    pygame.draw.circle(window, (0, 0,255),(x,y), width)
+  if keys[pygame.K_g]:
+    pygame.draw.circle(window, (0, 255,0),(x,y), width)
+  if keys[pygame.K_y]:
+    pygame.draw.circle(window, (255, 255,0),(x,y), width)
+  if keys[pygame.K_p]:
+    pygame.draw.circle(window, (255, 0,107),(x,y), width)
+
+  for event in pygame.event.get():
+    if event.type == pygame.KEYDOWN:
+        if event.key == pygame.K_UP:
+          width=width+1
+          print(width)
+        if event.key == pygame.K_DOWN:
+          width=width-1
+          print(width)
+pygame.quit()
