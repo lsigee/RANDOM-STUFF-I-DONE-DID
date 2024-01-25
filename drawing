@@ -13,10 +13,7 @@ while run:
       run = False
   
   if any(pygame.mouse.get_pressed()):
-    x, y = pygame.mouse.get_pos()
-    pygame.draw.circle(window, (0, 0, 0), (x, y), width)
-    pygame.display.update()
- 
+    x, y = pygame.mouse.get_pos() 
   keys=pygame.key.get_pressed()
   if keys[pygame.K_w]:
     pygame.draw.circle(window, (255, 255,255),(x,y), width)
@@ -30,6 +27,7 @@ while run:
     pygame.draw.circle(window, (255, 255,0),(x,y), width)
   if keys[pygame.K_p]:
     pygame.draw.circle(window, (255, 0,107),(x,y), width)
+  pygame.display.update()
 
   for event in pygame.event.get():
     if event.type == pygame.KEYDOWN:
